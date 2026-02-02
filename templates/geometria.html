@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<h1>Geometria</h1>
+
+<div class="calculos">
+
+    <div class="card_operacao">
+        <h2> Perímetro do Triângulo</h2>
+        <form class="form-somar" action="{{ url_for('triangulo') }}" method="post">
+            <label>
+                <input placeholder="Digite um número" class="form-control w-100" name="form-n1">
+            </label>
+
+            <p class="operador">+</p>
+
+            <label>
+                <input placeholder="Digite um número" class="form-control w-100" name="form-n2">
+            </label>
+            <p class="operador">+</p>
+            <label>
+                <input placeholder="Digite um número" class="form-control w-100" name="form-n3">
+            </label>
+
+            <p class="resultado">
+                {% if triangulo is defined %}
+                {{ n1 }} + {{ n2 }} + {{ n3 }} = {{ triangulo }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">triangulo</button>
+        </form>
+
+    </div>
+    <div class="card_operacao">
+        <h2>Perímetro do circulo</h2>
+        <form class="form-somar" action="{{ url_for('circulo') }}" method="post">
+            <label>
+                <input placeholder="Digite o raio do circulo" class="form-control w-100" name="form-n1">
+            </label>
+
+
+            <p class="resultado">
+                {% if circulo is defined %}
+                {{ n1 }} * 6.283185307179586 = {{ circulo }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">circulo</button>
+        </form>
+
+    </div>
+
+    <div class="card_operacao">
+        <h2>Perímetro do quadrado</h2>
+        <form class="form-somar" action="{{ url_for('quadrado') }}" method="post">
+            <label>
+                <input placeholder="Digite um número" class="form-control w-100" name="form-n1">
+            </label>
+
+            <p class="operador">+</p>
+
+            <label>
+                <input placeholder="Digite um número" class="form-control w-100" name="form-n2">
+            </label>
+
+            <p class="operador">+</p>
+
+            <label>
+                <input placeholder="Digite um número" class="form-control w-100" name="form-n3">
+            </label>
+
+            <p class="operador">+</p>
+
+            <label>
+                <input placeholder="Digite um número" class="form-control w-100" name="form-n4">
+            </label>
+
+
+            <p class="resultado">
+                {% if quadrado is defined %}
+                {{ n1 }} + {{ n2 }} + {{ n3 }} + {{ n4 }} = {{ quadrado }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">quadrado</button>
+        </form>
+
+    </div>
+    <div class="card_operacao">
+        <h2>Perímetro do Hexagono</h2>
+        <form class="form-somar" action="{{ url_for('hexa') }}" method="post">
+            <label>
+                <input placeholder="Digite um número" class="form-control w-100" name="form-n1">
+            </label>
+
+
+            <p class="resultado">
+                {% if hexa is defined %}
+                {{ n1 }} * 6 = {{ hexa }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">hexa</button>
+        </form>
+
+    </div>
+    <div class="card_operacao">
+        <h2>Área do Triângulo</h2>
+        <form class="form-somar" action="{{ url_for('tri') }}" method="post">
+            <label>
+                <input placeholder="Digite a base do triângulo" class="form-control w-100" name="form-n1">
+            </label>
+
+            <p class="operador">*</p>
+
+            <label>
+                <input placeholder="Digite a altura do triângulo" class="form-control w-100" name="form-n2">
+            </label>
+
+
+            <p class="resultado">
+                {% if tri is defined %}
+                {{ n1 }} * {{n2}} / 2 = {{ tri }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">área do triângulo</button>
+        </form>
+
+    </div>
+    <div class="card_operacao">
+        <h2>Área do circulo</h2>
+        <form class="form-somar" action="{{ url_for('cir') }}" method="post">
+            <label>
+                <input placeholder="Digite o raio do circulo" class="form-control w-100" name="form-n1">
+            </label>
+
+
+            <p class="resultado">
+                {% if cir is defined %}
+                3.14 * {{n1}} * {{n1}} = {{ cir }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">área do circulo</button>
+        </form>
+
+    </div>
+    <div class="card_operacao">
+        <h2>Área do quadrado</h2>
+        <form class="form-somar" action="{{ url_for('qua') }}" method="post">
+            <label>
+                <input placeholder="Digite o lado do quadrado" class="form-control w-100" name="form-n1">
+            </label>
+
+
+            <p class="resultado">
+                {% if qua is defined %}
+                {{n1}} * {{n1}} = {{ qua }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">área do quadrado</button>
+        </form>
+
+    </div>
+    <div class="card_operacao">
+        <h2>Área do Hexagono</h2>
+        <form class="form-somar" action="{{ url_for('hexagono') }}" method="post">
+            <label>
+                <input placeholder="Digite o lado do triangulo" class="form-control w-100" name="form-n1">
+            </label>
+
+
+            <p class="resultado">
+                {% if hexagono is defined %}
+                {{ hexagono }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">área do hexaono</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
