@@ -3,6 +3,22 @@
 {% block conteudo %}
 
 <h1>Geometria</h1>
+<!--  passo 2: verifica as mensagens enviadas pelo app-->
+<!-- passo 3: definir with_categories=true caso queira ter acesso as categorias-->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="flash-error px-3">
+    <!-- passo 4: Percorer a lista de mensagens          -->
+    {% for category, message in messages %}
+    <!--  passo 5: criar um card filho              -->
+    <div class="alert {{ category }} alert-dismissible fade show px-5" role="alert">
+        <strong>{{ message }}</strong>.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
 
 <div class="calculos">
 
@@ -32,6 +48,34 @@
 
             <button type="submit" class="btn btn-info">triangulo</button>
         </form>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                        <i class="bi bi-exclamation-diamond"></i>
+                        Como calcular?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                     data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+
+                        <h4>Perimetro do Triangulo</h4>
+                        <p>Para calcular o perímetro de um triângulo, utilizamos a fórmula:
+                            P
+                            =
+                            a
+                            +
+                            b
+                            +
+                            c
+                            P=a+b+c</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <div class="card_operacao">
@@ -51,6 +95,35 @@
 
             <button type="submit" class="btn btn-info">circulo</button>
         </form>
+        <div class="accordion accordion-flush" id="accordionFlushExample1">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree1" aria-expanded="false"
+                            aria-controls="flush-collapseThree1">
+                        <i class="bi bi-exclamation-diamond"></i>
+                        Como calcular?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree1" class="accordion-collapse collapse"
+                     data-bs-parent="#accordionFlushExample1">
+                    <div class="accordion-body">
+
+                        <h4>Periemtro do circulo</h4>
+                        <p>O perímetro de um círculo, também conhecido como circunferência, é a medida do comprimento da
+                            linha que o contorna. Para calcular o perímetro, você pode usar a fórmula:
+                            C = 2πr, onde C é o perímetro e r é o raio do círculo.
+                            2
+                            Se você já conhece o diâmetro (D), o perímetro pode ser calculado como C = πD.
+                            1
+
+                            O número π (Pi) é uma constante matemática aproximadamente igual a 3,14159, e o perímetro é
+                            a distância ao redor do círculo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 
@@ -89,6 +162,30 @@
 
             <button type="submit" class="btn btn-info">quadrado</button>
         </form>
+        <div class="accordion accordion-flush" id="accordionFlushExample4">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree4" aria-expanded="false"
+                            aria-controls="flush-collapseThree4">
+                        <i class="bi bi-exclamation-diamond"></i>
+                        Como calcular?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree4" class="accordion-collapse collapse"
+                     data-bs-parent="#accordionFlushExample4">
+                    <div class="accordion-body">
+
+                        <h4>Periemtro do quadrado</h4>
+                        <p>O perímetro do quadrado é calculado somando as medidas de todos os seus lados. Como todos os
+                            lados de um quadrado têm a mesma medida, a fórmula para calcular o perímetro é: P = 4L, onde
+                            L é a medida do lado do quadrado. Por exemplo, se o lado do quadrado mede 8 cm, o perímetro
+                            será P = 4 x 8 = 32 cm.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <div class="card_operacao">
@@ -108,6 +205,31 @@
 
             <button type="submit" class="btn btn-info">hexa</button>
         </form>
+        <div class="accordion accordion-flush" id="accordionFlushExample5">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree5" aria-expanded="false"
+                            aria-controls="flush-collapseThree5">
+                        <i class="bi bi-exclamation-diamond"></i>
+                        Como calcular?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree5" class="accordion-collapse collapse"
+                     data-bs-parent="#accordionFlushExample5">
+                    <div class="accordion-body">
+
+                        <h4>Perimetro do hexagono</h4>
+                        <p>P = 6·l
+                            A fórmula para calcular o perímetro de um hexágono regular é:
+                            P = 6·l,
+                            onde l é a medida de um dos lados do hexágono. Isso significa que, se você conhece a medida
+                            de um lado, basta multiplicar por 6 para obter o perímetro total do hexágono regular.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <div class="card_operacao">
@@ -133,6 +255,31 @@
 
             <button type="submit" class="btn btn-info">área do triângulo</button>
         </form>
+        <div class="accordion accordion-flush" id="accordionFlushExample11">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree11" aria-expanded="false"
+                            aria-controls="flush-collapseThree11">
+                        <i class="bi bi-exclamation-diamond"></i>
+                        Como calcular?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree11" class="accordion-collapse collapse"
+                     data-bs-parent="#accordionFlushExample11">
+                    <div class="accordion-body">
+
+                        <h4>Area do triangulo</h4>
+                        <p>A = (l²√3) / 4
+                            A área do triângulo equilátero pode ser calculada usando a fórmula:
+                            A = (l²√3) / 4,
+                            onde A representa a área e l é a medida de um dos lados do triângulo. Para calcular a área,
+                            basta substituir o valor de l na fórmula.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <div class="card_operacao">
@@ -152,6 +299,31 @@
 
             <button type="submit" class="btn btn-info">área do circulo</button>
         </form>
+        <div class="accordion accordion-flush" id="accordionFlushExample111">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree111" aria-expanded="false"
+                            aria-controls="flush-collapseThree111">
+                        <i class="bi bi-exclamation-diamond"></i>
+                        Como calcular?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree111" class="accordion-collapse collapse"
+                     data-bs-parent="#accordionFlushExample111">
+                    <div class="accordion-body">
+
+                        <h4>Area do circulo</h4>
+                        <p>Π * raio²
+                            A área do círculo é calculada pela fórmula área = π * raio², onde π (pi) é aproximadamente
+                            3,14159. Para calcular a área, você precisa conhecer o raio (r), que é a distância do centro
+                            do círculo até a borda. Se você não souber o raio, pode obtê-lo dividindo o diâmetro (d) por
+                            2. </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <div class="card_operacao">
@@ -171,6 +343,55 @@
 
             <button type="submit" class="btn btn-info">área do quadrado</button>
         </form>
+        <div class="accordion accordion-flush" id="accordionFlushExample1111">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree1111" aria-expanded="false"
+                            aria-controls="flush-collapseThree1111">
+                        <i class="bi bi-exclamation-diamond"></i>
+                        Como calcular?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree1111" class="accordion-collapse collapse"
+                     data-bs-parent="#accordionFlushExample1111">
+                    <div class="accordion-body">
+
+                        <h4>Area do quadrado</h4>
+                        <p>A área do quadrado é calculada elevando o comprimento de um de seus lados ao quadrado, usando
+                            a fórmula \(A = l\^2\).
+                            Fórmula da Área
+                            Para calcular a área de um quadrado, utilizamos a seguinte fórmula:
+                            \[ A = l\^2 \]
+                            onde
+                            A
+                            A representa a área e
+                            l
+                            l é o comprimento de um dos lados do quadrado. Como todos os lados do quadrado são iguais,
+                            basta medir um lado e elevá-lo ao quadrado para encontrar a área total.
+                            Exemplo Prático
+                            Se um quadrado tem lados medindo 5 cm, a área pode ser calculada assim:
+                            \[ A = 5 \, \text{cm} \times 5 \, \text{cm} = 25 \, \text{cm}\^2 \]
+                            Importância da Área do Quadrado
+                            A área do quadrado é um conceito fundamental na geometria e tem diversas aplicações
+                            práticas, como em arquitetura, design de interiores e planejamento de espaços. Compreender
+                            como calcular a área é essencial para resolver problemas acadêmicos e enfrentar desafios do
+                            cotidiano, como medir terrenos ou planejar construções.
+                            Toda Matéria
+                            +1
+                            Resumo
+                            Fórmula: \(A = l\^2\)
+                            Exemplo: Para um lado de 6 cm, a área é \(36 \, \text{cm}\^2\).
+                            Aplicações: Usada em diversas áreas, como engenharia e design.
+                            Compreender a área do quadrado é uma habilidade prática e valiosa que pode ser aplicada em
+                            várias situações do dia a dia.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
     <div class="card_operacao">
@@ -190,6 +411,29 @@
 
             <button type="submit" class="btn btn-info">área do hexaono</button>
         </form>
+        <div class="accordion accordion-flush" id="accordionFlushExample11111">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree11111" aria-expanded="false"
+                            aria-controls="flush-collapseThree11111">
+                        <i class="bi bi-exclamation-diamond"></i>
+                        Como calcular?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree11111" class="accordion-collapse collapse"
+                     data-bs-parent="#accordionFlushExample1111">
+                    <div class="accordion-body">
+
+                        <h4>Area do hexagono</h4>
+                        <p>Para calcular a área do hexágono regular, você pode usar a seguinte fórmula:
+                            Área = 3/4 * L^2, onde L é a medida do lado do hexágono.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
