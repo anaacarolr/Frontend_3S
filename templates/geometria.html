@@ -3,14 +3,10 @@
 {% block conteudo %}
 
 <h1>Geometria</h1>
-<!--  passo 2: verifica as mensagens enviadas pelo app-->
-<!-- passo 3: definir with_categories=true caso queira ter acesso as categorias-->
 {% with messages = get_flashed_messages(with_categories=true) %}
 {% if messages %}
 <div class="flash-error px-3">
-    <!-- passo 4: Percorer a lista de mensagens          -->
     {% for category, message in messages %}
-    <!--  passo 5: criar um card filho              -->
     <div class="alert {{ category }} alert-dismissible fade show px-5" role="alert">
         <strong>{{ message }}</strong>.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

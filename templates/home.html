@@ -1,14 +1,72 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-
-<div class="home">
-    <div class="texto-left">
-        <h1>Bem vindo ao site de soluções do SENAI</h1>
+<div class="carrosel d-flex overflow-hidden">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="/static/img/carrousel-1.jpeg" class="d-block w-100 opacity-70" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="/static/img/violino.jpeg" class="d-block w-100 opacity-70" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="/static/img/arte.jpeg" class="d-block w-100 opacity-70" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="img-right">
+    <div class="w-100 h-100 position-absolute d-flex flex-column justify-content-evenly">
+        <p class="title-senai text-white display-1 text-center">Capacitação profissional na indústria</p>
+        <p class="subtitle-senai text-white display-6 text-center">Confira os nossos cursos Profissionalizantes</p>
+    </div>
+
+</div>
+
+<div class="cursos">
+
+    <div class="cursos-text col-8">
+        <h1>Fotográfia</h1><br>
+        <p class="letra">
+            Você já sentiu que a imagem no visor nunca faz justiça à beleza do que você está vendo? Capturar um momento
+            vai muito além de apertar um botão; é sobre contar uma história através da luz.<br>
+
+            Neste curso, vamos transformar sua percepção técnica e artística. Você aprenderá a dominar as configurações
+            da sua câmera enquanto desenvolve um olhar sensível para composição, cores e narrativa visual. Deixe de
+            tirar fotos e comece a criar imagens que emocionam.<br>
+
+            O que você vai aprender: Composição avançada, a "Hora de Ouro", e como encontrar beleza no cotidiano.<br>
+
+            Para quem é: Entusiastas e iniciantes que buscam um hobby gratificante ou uma nova forma de expressão.<br>
+        </p>
+
+    </div>
+    <div class="cursos-img bg-dark col-4">
+        <img src="/static/img/carrousel-1.jpeg" height="100%" width="100%">
+    </div>
+
+</div>
+<div class="cursos">
+    <div class="cursos-img bg-dark col-4">
+        <img src="/static/img/violino.jpeg" height="100%" width="100%">
+    </div>
+    <div class="cursos-text col-8">
+        <h1>Músico</h1><br>
+        <p class="letra">
+            Você sempre quis tocar, mas não sabe por onde começar? Nosso curso foi desenhado para transformar sua paixão<br>
+            em técnica real. Combinamos prática imediata com os fundamentos necessários para você não apenas "repetir<br>
+            notas", mas entender a música.
+        </p>
 
     </div>
 </div>
-
 {% endblock %}
