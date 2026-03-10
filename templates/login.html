@@ -8,19 +8,20 @@
         <h2 class="text-center mb-4">Login</h2>
 
         <!-- ADICIONADO: Tag form com a rota de login -->
-        <form action="{{ url_for('login') }}" method="post">
+        <form id="form-login" action="{{ url_for('login') }}" method="post">
 
             <div class="mb-3">
                 <label class="form-label">Email:</label>
-                <input type="email" name="form-email" class="form-control" placeholder="seu@email.com" required>
+                <input id="input-email" type="email" name="form-email" class="form-control" placeholder="seu@email.com" required>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Senha:</label>
-                <input type="password" name="form-senha" class="form-control" placeholder="******" required>
+                <input id="input-senha" type="password" name="form-senha" class="form-control" placeholder="******" required>
             </div>
 
             <button type="submit" class="btn btn-info w-100 mt-2 text-white">Entrar</button>
+            <a  class="btn btn-danger w-100 mt-2 text-white" onclick="limpaInputsLogin()">Cancelar</a>
 
             <div class="text-center mt-3">
                 <small>Não tem conta? <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastre-se</a></small>

@@ -7,27 +7,28 @@
         <h2 class="text-center mb-4">Cadastrar-se</h2>
 
         <!-- ADICIONADO: Tag form com a rota de login -->
-        <form action="{{ url_for('cadastro_funcionario') }}" method="POST">
+        <form id="formCadastro"    action="{{ url_for('cadastro_funcionario') }}" method="POST">
 
             <div class="mb-3">
-                <label class="form-label">Nome:</label>
+                <label id="form-nome" class="form-label">Nome:</label>
                 <!-- ADICIONADO: class form-control e o name correto -->
-                <input type="text" name="form-nome" class="form-control" placeholder="João" required>
+                <input    type="text" name="form-nome" class="form-control" placeholder="João" required>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Email:</label>
                 <!-- ADICIONADO: class form-control e o name correto -->
-                <input type="email" name="form-email" class="form-control" placeholder="seu@email.com" required>
+                <input id="input-emaill"  type="email" name="form-email" class="form-control" placeholder="seu@email.com" required>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Senha:</label>
                 <!-- ADICIONADO: class form-control e o name correto -->
-                <input type="password" name="form-senha" class="form-control" placeholder="******" required>
+                <input id="input-senha"  type="password" name="form-senha" class="form-control" placeholder="******" required>
             </div>
 
             <button type="submit" class="btn btn-info w-100 mt-2 text-white">Entrar</button>
+            <a class="btn btn-danger w-100 mt-2 text-white" onclick="limpaInputsCadastro()">Cancelar</a>
         </form>
     </div>
 </div>

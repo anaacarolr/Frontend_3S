@@ -239,6 +239,10 @@ def cadastro_funcionario():
 
         return redirect(url_for('funcionarios'))
 
+@app.route('/animais')
+def animais():
+    return render_template('animais.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
