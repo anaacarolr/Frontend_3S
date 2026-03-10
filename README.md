@@ -16,3 +16,5 @@
 <img width="1913" height="910" alt="calculos" src="https://github.com/user-attachments/assets/943bc3a7-c797-4927-83a2-a7809f782f4c" />
 ## operações
 <img width="1918" height="907" alt="operações" src="https://github.com/user-attachments/assets/f1568cde-5fd7-49db-a3d2-62b102654230" />
+## animais
+<img width="1918" height="913" alt="animais" src="https://github.com/user-attachments/assets/e0c3af4d-fe8e-4b5f-8da4-ac745908605b" />
